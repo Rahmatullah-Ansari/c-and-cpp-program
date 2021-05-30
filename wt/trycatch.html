@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+    <style>
+        label,#fact,input[type="text"]{
+            font-size: 20px;
+            color: blue;
+            font-family: monospace;
+            border: 2px solid groove;
+        }
+        button{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <center><br><br>
+        <label>Enter a number:</label><br><br>
+        <input type="text"id="inp" onclick="check()"><br><br>
+        <div id="fact"></div><br><br>
+        <button type="button" id="btn" onclick="find()">Find</button>
+    </center>
+    <script>
+        function check(){
+            if(document.querySelector("#inp").value != "")
+            document.querySelector("#btn").style.visibility="visible";
+            else
+            document.querySelector("#btn").style.visibility="hidden";
+        }
+        function find(){
+        var input=document.querySelector("#inp").value;
+        input= +input;
+        try{
+            if(input<0){
+                throw "Please enter positive value!";
+            }
+            else{
+                var f=1;
+                for(let i=1;i<=input;i++){
+                    f*=i;
+                }
+                document.querySelector("#fact").innerHTML="Factorial = "+f;
+            }
+        }catch(ex){
+            document.querySelector("#fact").innerHTML=ex;
+        }
+    }
+    </script>
+</body>
+</html>

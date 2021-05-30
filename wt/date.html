@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object</title>
+    <style>
+        #dt{
+            font-size: 40px;
+            color:blue;
+            font-weight: bold;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <center><br><br><br>
+        <div id="dt">
+        </div>
+    </center>
+    <script>
+        setInterval(()=>{
+        var d=new Date();
+        var date=d.getDate();
+        var m=d.getMonth()+1;
+        var y=d.getFullYear();
+        var dname=d.getDay();
+        var h=d.getHours();
+        var min=d.getMinutes();
+        var s=d.getSeconds();
+        var dt=document.querySelector("#dt");
+        var arr=["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday"];
+        var arr1=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        if(h>12)
+        dt.innerHTML="Time:- "+(h-12)+" : "+min+" : "+s+"<br><br>";
+        else
+        dt.innerHTML="Time :- "+h+" : "+min+" : "+s+"<br><br>";
+        dt.innerHTML+="Date:- "+date+" "+arr1[m-1]+" "+y+","+arr[dname]+".";
+        },1000);
+    </script>
+</body>
+</html>

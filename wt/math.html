@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+    <style>
+        #m{
+            font-size: 25px;
+            font-weight: bold;
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="m">
+        </div>
+    </center>
+    <script>
+        var x=prompt("Enter x:");
+        var n=prompt("Enter n:");
+        var d=document.querySelector("#m");
+        if((x != null && n != null)||(x != "" && n != "")){
+        d.innerHTML="<br><br>Number x = "+x+"<br><br>Power of x = n = "+n+"<br><br>Power x<sup>n</sup> = "+x+"<sup>"+n+"</sup>"+" = "+Math.pow(x,n);
+        }
+        else
+        d.innerHTML="Please Enter both the value!";
+    </script>
+</body>
+</html>

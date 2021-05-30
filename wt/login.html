@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        p{
+            color:red;
+            font-size: 40px;
+        }
+        #con{
+            width: 600px;
+            height:400px ;
+            border: 5px solid blue;
+            background-color: cyan;
+        }
+        label{
+            font-size: 35px;
+        }
+        input[type="text"],input[type="password"],button{
+            text-align: center;
+            font-size: 20px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <center>
+        <p>Student Login Form</p>
+        <form>
+        <div id="con">
+            <br><br>
+            <label>Username</label><br><br>
+            <input type="text" id="usr"placeholder="Enter user name"name="username" required><br><br>
+            <label>Password</label><br><br>
+            <input type="text" id="pas"placeholder="Enter password" name="password" required><br><br>
+            <button type="submit" onclick="check()">Login</button><br><br>
+            <input type="checkbox" checked="checked">Remember me<br><br>
+            forgot <a href="#">password?</a>
+        </div>
+        </form>
+    </center>
+    <script>
+        function check(){
+            var usr=document.querySelector("#usr").value;
+            var pas=document.querySelector("#pas").value;
+            if(usr != "" && pas != ""){
+            alert("Login successfully!");
+            pas="";
+            usr="";
+            }
+            else
+            alert("Something went wrong!");
+        }
+    </script>
+</body>
+</html>

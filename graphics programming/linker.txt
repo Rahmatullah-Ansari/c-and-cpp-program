@@ -1,0 +1,6 @@
+for compile a program = g++ -o <exe filename> filename.cpp -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+
+linker = 
+-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+
+E:\MinGW\bin

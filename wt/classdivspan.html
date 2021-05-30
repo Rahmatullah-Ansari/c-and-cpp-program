@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use of class selector,div and span tag</title>
+</head>
+<body bgcolor="skyblue">
+    <center>
+        <div class="para">Good Morning,Have a nice day.</div>
+    </center>
+    <script>
+        var para=document.querySelector(".para");
+        para.style.color = "red";
+        para.innerHTML+="<br><br><div>How are you?</div><br><span style='color:blue;'>wonderful day</span>";
+    </script>
+</body>
+</html>

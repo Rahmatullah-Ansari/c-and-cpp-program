@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of two numbers</title>
+    <style>
+        #con{
+            width:450px;
+            height: 450px;
+            background-color: grey;
+        }
+        label,#sum,input[type="text"],#s,button{
+            font-size: 25px;
+            color: black;
+
+        }
+        p{
+            color:blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <center>
+        <div id="con"><br>
+            <p>Sum Of Two Numbers</p>
+            <label>
+                Enter First Number:
+            </label><br><br>
+            <input type="text" id="num1"><br><br>
+            <label>
+                Enter Second Number:
+            </label><br><br>
+            <input type="text" id="num2"><br><br>
+            <div id="s">Sum Of Two Numbers:</div><br>
+            <button type="button" onclick="sum()">Add</button>
+            <button type="button" onclick="cl()">clear</button>
+        </div>
+    </center>
+    <script>
+        function sum(){
+            var a=document.querySelector("#num1").value;
+            var b=document.querySelector("#num2").value;
+            var s=document.querySelector("#s");
+            if(a !="" && b !=""){
+                var c=+a + +b;
+                s.innerHTML+="<br>"+c;
+            }
+            else
+            alert("Please enter value!");
+        }
+        function cl(){
+            document.querySelector("#num1").value="";
+            document.querySelector("#num2").value="";
+            document.querySelector("#s").innerHTML="Sum Of Two Numbers:";
+        }
+    </script>
+</body>
+</html>
