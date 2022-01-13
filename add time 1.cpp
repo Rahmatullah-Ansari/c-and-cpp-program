@@ -27,7 +27,6 @@ Time Time::operator +(Time t2)
 }
 main( )
 {
-	clrscr( );
 	Time t1,t2,t3;
 	t1.read( );
 	t1.print( );
